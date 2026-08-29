@@ -1,0 +1,90 @@
+.task-item--editing {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;
+}
+
+.edit-task-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.edit-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.edit-text-input {
+  flex: 1;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  transition: border-color var(--transition-fast);
+}
+
+.edit-text-input:focus {
+  border-color: var(--input-focus-border);
+}
+
+.priority-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  padding: 3px 7px;
+}
+
+.priority-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.edit-priority-input {
+  width: 28px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: transparent;
+}
+
+.edit-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn--save {
+  padding: 6px 12px;
+  font-size: 0.82rem;
+}
+
+.btn--cancel {
+  padding: 6px 10px;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 520px) {
+  .edit-task-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .edit-actions {
+    justify-content: flex-end;
+  }
+}

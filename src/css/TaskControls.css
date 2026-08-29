@@ -1,0 +1,98 @@
+.task-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2px 0;
+}
+
+.control-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.control-filter-toggle:hover {
+  color: var(--text-main);
+}
+
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--card-border);
+  transition: all var(--transition-normal);
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: #a1a1aa;
+  border-radius: 50%;
+  transition: all var(--transition-normal);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.toggle-checkbox:checked + .toggle-switch::after {
+  transform: translateX(14px);
+  background-color: #090a0f;
+}
+
+.toggle-checkbox:focus-visible + .toggle-switch {
+  box-shadow: 0 0 0 2px var(--input-focus-glow);
+}
+
+.sort-btn {
+  font-size: 0.82rem;
+  padding: 7px 12px;
+  color: var(--text-muted);
+}
+
+.sort-btn:hover {
+  color: var(--text-main);
+}
+
+.sort-btn svg {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.sort-btn:hover svg {
+  color: var(--text-main);
+}
+
+@media (max-width: 480px) {
+  .task-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sort-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

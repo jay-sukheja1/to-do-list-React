@@ -1,0 +1,96 @@
+.task-form {
+  display: flex;
+  gap: 8px;
+  background: var(--input-bg);
+  padding: 6px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--input-border);
+  transition: all var(--transition-fast);
+}
+
+.task-form:focus-within {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--input-focus-glow);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.task-input-group {
+  flex: 1;
+}
+
+.task-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.task-input::placeholder {
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.priority-input-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  border: 1px solid var(--card-border);
+}
+
+.priority-input-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.priority-input {
+  width: 32px;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: transparent;
+  padding: 2px 0;
+}
+
+/* Remove default number arrows styling for sleek look */
+.priority-input::-webkit-inner-spin-button,
+.priority-input::-webkit-outer-spin-button {
+  opacity: 0.3;
+}
+
+.add-task-btn {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+}
+
+@media (max-width: 540px) {
+  .task-form {
+    flex-wrap: wrap;
+  }
+
+  .task-input-group {
+    width: 100%;
+    flex: 100%;
+  }
+
+  .priority-input-group {
+    flex: 1;
+  }
+
+  .add-task-btn {
+    flex-grow: 1;
+  }
+}

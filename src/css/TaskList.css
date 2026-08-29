@@ -1,0 +1,36 @@
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  color: var(--text-dim);
+}
+
+.empty-state-icon {
+  margin-bottom: 8px;
+  opacity: 0.3;
+}
+
+.empty-state-text {
+  font-size: 0.9rem;
+  font-weight: 450;
+  color: var(--text-muted);
+}

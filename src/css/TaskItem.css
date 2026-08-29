@@ -1,0 +1,179 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--item-bg);
+  border: 1px solid var(--item-border);
+  border-radius: var(--radius-md);
+  padding: 11px 14px;
+  transition: all var(--transition-fast);
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item:hover {
+  background: var(--item-hover-bg);
+  border-color: var(--item-hover-border);
+}
+
+.task-item--completed {
+  opacity: 0.5;
+  background: transparent;
+}
+
+.task-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Custom Checkbox */
+.custom-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.custom-checkbox-input:checked ~ .checkbox-custom {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.checkbox-custom::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid #090a0f;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox-input:checked ~ .checkbox-custom::after {
+  display: block;
+}
+
+.custom-checkbox-label:hover .checkbox-custom {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Task Details */
+.task-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.task-text {
+  font-size: 0.92rem;
+  font-weight: 450;
+  color: var(--text-main);
+  word-break: break-word;
+  transition: all var(--transition-fast);
+}
+
+.task-text--done {
+  text-decoration: line-through;
+  color: var(--text-dim);
+}
+
+/* Priority Badges */
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 1px 7px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.priority-badge.priority-1 {
+  background: var(--priority-1-bg);
+  color: var(--priority-1-text);
+  border: 1px solid var(--priority-1-border);
+}
+
+.priority-badge.priority-2 {
+  background: var(--priority-2-bg);
+  color: var(--priority-2-text);
+  border: 1px solid var(--priority-2-border);
+}
+
+.priority-badge.priority-3 {
+  background: var(--priority-3-bg);
+  color: var(--priority-3-text);
+  border: 1px solid var(--priority-3-border);
+}
+
+.priority-badge.priority-default {
+  background: var(--priority-default-bg);
+  color: var(--priority-default-text);
+  border: 1px solid var(--priority-default-border);
+}
+
+/* Action Buttons */
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.btn--edit {
+  color: var(--text-muted);
+}
+
+.btn--edit:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn--delete {
+  color: var(--text-muted);
+}
+
+.btn--delete:hover {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
