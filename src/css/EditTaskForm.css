@@ -1,6 +1,6 @@
 .task-item--editing {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: var(--item-hover-bg);
+  border-color: var(--item-hover-border);
   padding: 8px 12px;
 }
 

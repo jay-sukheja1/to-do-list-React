@@ -18,8 +18,8 @@
   justify-content: center;
   padding: 36px 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.015);
-  border: 1px dashed rgba(255, 255, 255, 0.08);
+  background: var(--input-bg);
+  border: 1px dashed var(--item-hover-border);
   border-radius: var(--radius-lg);
   color: var(--text-dim);
 }

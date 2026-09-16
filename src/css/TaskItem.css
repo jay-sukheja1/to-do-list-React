@@ -63,14 +63,14 @@
   width: 18px;
   height: 18px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: var(--checkbox-bg);
+  border: 1.5px solid var(--checkbox-border);
   transition: all var(--transition-fast);
 }
 
 .custom-checkbox-input:checked ~ .checkbox-custom {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .checkbox-custom::after {
@@ -81,7 +81,7 @@
   top: 1px;
   width: 4px;
   height: 9px;
-  border: solid #090a0f;
+  border: solid var(--primary-text);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -91,7 +91,7 @@
 }
 
 .custom-checkbox-label:hover .checkbox-custom {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: var(--text-muted);
 }
 
 /* Task Details */
@@ -166,7 +166,7 @@
 
 .btn--edit:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(56, 51, 46, 0.08);
 }
 
 .btn--delete {

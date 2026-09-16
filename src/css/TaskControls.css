@@ -33,7 +33,7 @@
   display: inline-block;
   width: 34px;
   height: 20px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: var(--toggle-bg);
   border-radius: var(--radius-pill);
   border: 1px solid var(--card-border);
   transition: all var(--transition-normal);
@@ -46,19 +46,19 @@
   left: 2px;
   width: 14px;
   height: 14px;
-  background-color: #a1a1aa;
+  background-color: var(--toggle-knob);
   border-radius: 50%;
   transition: all var(--transition-normal);
 }
 
 .toggle-checkbox:checked + .toggle-switch {
-  background-color: #ffffff;
-  border-color: #ffffff;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .toggle-checkbox:checked + .toggle-switch::after {
   transform: translateX(14px);
-  background-color: #090a0f;
+  background-color: var(--primary-text);
 }
 
 .toggle-checkbox:focus-visible + .toggle-switch {

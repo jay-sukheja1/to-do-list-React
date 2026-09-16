@@ -68,7 +68,7 @@
 }
 
 .stats-badge {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--badge-bg);
   border: 1px solid var(--card-border);
   padding: 5px 12px;
   border-radius: var(--radius-pill);

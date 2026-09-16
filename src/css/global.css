@@ -74,24 +74,24 @@ input {
   background: var(--primary);
   color: var(--primary-text);
   box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+    0 1px 2px rgba(56, 51, 46, 0.15),
+    0 0 0 1px rgba(56, 51, 46, 0.05);
 }
 
 .btn--primary:hover {
   background: var(--primary-hover);
-  box-shadow: 0 2px 8px var(--primary-glow);
+  box-shadow: 0 4px 12px var(--primary-glow);
 }
 
 .btn--secondary {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--badge-bg);
   color: var(--text-main);
   border: 1px solid var(--card-border);
 }
 
 .btn--secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.16);
+  background: var(--item-border);
+  border-color: var(--checkbox-border);
 }
 
 .btn--icon {
@@ -102,5 +102,5 @@ input {
 
 .btn--icon:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(56, 51, 46, 0.08);
 }
